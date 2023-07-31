@@ -1,0 +1,3 @@
+https://bugs.chromium.org/p/chromium/issues/detail?id=1174553&q=css%20variables%20not%20defined&can=2
+
+https://stackoverflow.com/questions/64402424/why-does-the-css-cursor-property-not-work-for-the-styled-scrollbar

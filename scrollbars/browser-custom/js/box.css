@@ -1,0 +1,32 @@
+.box {
+  border-radius: var(--box-scrollbar-border-radius);
+  overflow: auto;
+}
+
+.box::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--box-scrollbar-border-radius);
+}
+
+.box::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.box::-webkit-scrollbar-track,
+.box::-webkit-scrollbar-thumb {
+  border: calc(var(--box-scrollbar-border-radius) + 1px) solid transparent;
+  border-radius: var(--box-scrollbar-border-radius);
+  background-color: #E6E6E6;
+  background-clip: padding-box;
+}
+
+.box::-webkit-scrollbar-thumb {
+  background-color: #999999;
+}
+
+.box::-webkit-scrollbar-track:hover,
+.box::-webkit-scrollbar-thumb:hover {
+  border: var(--box-scrollbar-border-radius) solid transparent;
+  border-radius: calc(var(--box-scrollbar-border-radius) + 4px);
+}
