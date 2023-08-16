@@ -1,3 +1,7 @@
 :root {
-  --box-scrollbar-border-radius: 8px;
+  --box-scrollbar-border-width: 8px;
+  --box-scrollbar-border-radius-static: 8px;
+  --box-scrollbar-border-radius-hover: 12px;
+  --box-scrollbar-width-number: 20;
+  --box-scrollbar-width-unit: 20px;
 }

@@ -1,12 +1,13 @@
+/* Static state */
+
 .box {
-  border-radius: var(--box-scrollbar-border-radius);
+  border-radius: 8px;
   overflow: auto;
 }
 
 .box::-webkit-scrollbar {
-  width: 20px;
-  height: 20px;
-  border-radius: var(--box-scrollbar-border-radius);
+  width: var(--box-scrollbar-width-unit);
+  border-radius: var(--box-scrollbar-border-radius-static);
 }
 
 .box::-webkit-scrollbar-corner {
@@ -15,18 +16,34 @@
 
 .box::-webkit-scrollbar-track,
 .box::-webkit-scrollbar-thumb {
-  border: calc(var(--box-scrollbar-border-radius) + 1px) solid transparent;
-  border-radius: var(--box-scrollbar-border-radius);
+  border: calc(var(--box-scrollbar-border-width) + 1px) solid transparent;
+  border-radius: var(--box-scrollbar-border-radius-static);
   background-color: #E6E6E6;
   background-clip: padding-box;
 }
 
 .box::-webkit-scrollbar-thumb {
-  background-color: #999999;
+  background-color: #666666;
 }
 
 .box::-webkit-scrollbar-track:hover,
 .box::-webkit-scrollbar-thumb:hover {
-  border: var(--box-scrollbar-border-radius) solid transparent;
-  border-radius: calc(var(--box-scrollbar-border-radius) + 4px);
+  border-width: var(--box-scrollbar-border-width);
+  border-radius: var(--box-scrollbar-border-radius-hover);
+}
+
+/* Hover modifier */
+
+.box.box--scroll-hover {
+  cursor: grab;
+}
+
+/* Mouse down modifier */
+
+.box.box--scroll-hover.box--mouse-down {
+  cursor: grabbing;
+}
+
+.box.box--scroll-hover.box--mouse-down::-webkit-scrollbar-thumb {
+  border: calc(var(--box-scrollbar-border-width) - 2px) solid transparent;
 }
